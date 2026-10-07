@@ -1,31 +1,36 @@
-# Honey Type Classification with TensorFlow
+# يسير للمبيعات والحسابات
 
-This project leverages **TensorFlow** to build an AI model capable of classifying three types of honey: **Samar**, **Farz**, and **Abyad** based on their images.
+تطبيق Flutter عربي وواجهة RTL لأصحاب البقالات والمتاجر الصغيرة. يقدم وضعين داخل المنتج نفسه:
 
-## Requirements
-- Python 3.6+
-- TensorFlow
-- Keras
-- NumPy
-- Matplotlib
-- Scikit-learn
+- **الأساسي:** العملاء، الديون، الدفعات، الموردون، الحسابات، الدخل والمصروف والتحويلات.
+- **الاحترافي:** كل ما سبق، إضافة إلى الأصناف والمخزون ونقطة البيع النقدي والآجل والأرباح اليومية.
 
-## Setup and Usage
-1. **Prepare the Dataset**: Organize your images into a `dataset/` directory with three subfolders for each honey type (`samar/`, `farz/`, `abyad/`).
-2. **Install Dependencies**:
-    ```bash
-    pip install tensorflow matplotlib scikit-learn numpy
-    ```
-3. **Train the Model**: Run the training script to train the CNN model and save the best-performing model.
-4. **Classify New Images**: Use the trained model to classify new honey images and save the results to a CSV file.
+> ابدأ بما تحتاجه فقط، وتوسع وقت ما تحتاج.
 
-## Notes
-- Ensure balanced datasets for each honey type to improve model accuracy.
-- Utilize **Transfer Learning** techniques for enhanced performance.
-- Evaluate model performance using accuracy plots and confusion matrices.
+## النسخة الحالية
 
-## Contributions
-Contributions are welcome! Please open an issue or submit a pull request for any enhancements or bug fixes.
+النسخة الحالية MVP قابلة للتشغيل على Flutter Web والجوال، وتعمل محليًا حتى دون اتصال. تبدأ ببيانات فارغة وحساب «الصندوق» فقط؛ جميع الأرقام الظاهرة تُحسب من العمليات التي يُدخلها المستخدم ولا تعتمد على بيانات تجريبية ثابتة.
 
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+المشروع موجود في [`yaseer_app`](./yaseer_app)، والتصميم المعماري المفصل في [`ARCHITECTURE_AR.md`](./yaseer_app/docs/ARCHITECTURE_AR.md).
+
+## التشغيل
+
+```bash
+cd yaseer_app
+flutter pub get
+flutter run -d chrome
+```
+
+## الفحص والبناء
+
+```bash
+flutter analyze
+flutter test
+flutter build web --release --no-web-resources-cdn --base-href "/-202170183-alawi-almashhoor/"
+```
+
+يُنشر إصدار الويب آليًا على GitHub Pages عند نجاح الفحص والبناء في الفرع `main`.
+
+## ملاحظة البيانات
+
+في هذه النسخة تُحفظ البيانات داخل الجهاز/المتصفح. المزامنة بين أكثر من جهاز أو مستخدم تحتاج ربط التطبيق بخلفية موثوقة مثل Supabase/PostgreSQL أو Firebase، مع سجل حركات وOutbox للمزامنة كما هو موضح في وثيقة المعمارية.

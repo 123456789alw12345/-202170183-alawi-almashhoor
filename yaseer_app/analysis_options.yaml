@@ -1,0 +1,19 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  exclude:
+    - build/**
+    - .dart_tool/**
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+    - web/**
+  errors:
+    invalid_use_of_protected_member: error
+    invalid_use_of_visible_for_testing_member: error
+
+linter:
+  rules:
+    avoid_dynamic_calls: true
+    avoid_print: true
+    directives_ordering: true
+    unawaited_futures: true

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title description">
+  <title id="title">يسير</title>
+  <desc id="description">مسار بسيط ينتهي بعلامة صح، شعار تطبيق يسير للمبيعات والحسابات</desc>
+  <defs>
+    <linearGradient id="background" x1="76" y1="54" x2="430" y2="458" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B927C"/>
+      <stop offset="1" stop-color="#056152"/>
+    </linearGradient>
+    <linearGradient id="path" x1="139" y1="154" x2="379" y2="362" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#DDF7EE"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#034D41" flood-opacity=".25"/>
+    </filter>
+  </defs>
+
+  <rect x="32" y="32" width="448" height="448" rx="112" fill="url(#background)"/>
+  <circle cx="398" cy="126" r="31" fill="#F4BD4B"/>
+  <circle cx="128" cy="370" r="17" fill="#F4BD4B"/>
+
+  <g fill="none" stroke="url(#path)" stroke-linecap="round" stroke-linejoin="round" filter="url(#shadow)">
+    <path d="M132 214h91c25 0 45 20 45 45v0c0 25-20 45-45 45h-29" stroke-width="42"/>
+    <path d="m218 304 61 61 112-151" stroke-width="46"/>
+  </g>
+
+  <circle cx="132" cy="214" r="12" fill="#F4BD4B"/>
+</svg>
